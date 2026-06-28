@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* #F4F2EC cream · #19243B navy · #E8623C orange-red · white */
+    --background: 45 27% 94%;         /* #F4F2EC */
+    --foreground: 221 40% 16%;        /* #19243B */
+    --card: 0 0% 100%;                /* white */
+    --card-foreground: 221 40% 16%;   /* #19243B */
+    --primary: 222 60% 40%;           /* medium navy blue */
+    --primary-foreground: 0 0% 100%;  /* white */
+    --secondary: 45 20% 88%;          /* warm cream, slightly deeper */
+    --secondary-foreground: 221 40% 16%;
+    --muted: 45 20% 88%;
+    --muted-foreground: 221 25% 42%;  /* mid-navy */
+    --accent: 222 60% 40%;            /* medium navy blue */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 45 15% 84%;             /* soft warm grey */
+    --input: 45 15% 84%;
+    --ring: 13 79% 57%;               /* #E8623C orange */
+    --radius: 0.6rem;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
